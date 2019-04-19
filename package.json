@@ -1,0 +1,41 @@
+{
+  "name": "user-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node ./bin/www --inspect",
+    "debug": "nodemon --inspect babel-node ./bin/www",
+    "stop": "npm stop"
+  },
+  "scriptsPM2": {
+    "start": "pm2 start ./bin/www -i max --watch",
+    "stop": "pm2 kill"
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "bcrypt": "^3.0.6",
+    "compression": "^1.7.3",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
+    "hbs": "^4.0.2",
+    "helmet": "^3.15.0",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
+    "moment-timezone": "^0.5.23",
+    "mongoose": "^5.4.2",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^3.2.4",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
+}
