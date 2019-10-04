@@ -59,7 +59,7 @@ router.post('/', async (req, res, next) => {
                 };
 
                 const token = jwt.sign({user: body}, config.secret);
-                return res.json({token});
+                return res.json({token, user});
 
             });
         } catch (error) {
